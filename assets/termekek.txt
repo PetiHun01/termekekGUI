@@ -1,0 +1,16 @@
+termék neve;áfa kulcs;nettó egységár
+2,8%-os tej;5;385,2
+cukor;27;541,3
+kakaós csiga;18;259,12
+étolaj;27;681,21
+liszt;27;512,6
+joghurt 4 db-os;18;745,68
+sertés comb;5;2257,1
+csirkemell filé;5;2129,87
+macska nedves táp 44db-os;27;8122,65
+kovászos kenyér;18;621,8
+1,5%-os tej;5;324,9
+őrölt kávé 1kg;27;6211,4
+tejcsokoládé;27;711,9
+kakaós kalács;18;649,5
+marha nyak;5;6415,5
