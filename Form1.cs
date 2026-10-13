@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics.Eventing.Reader;
 
 namespace termekekGUI
 {
@@ -105,7 +106,7 @@ namespace termekekGUI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("A nettó árnak számnak kell lennie!" + ex.Message, "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("A nettó árnak számnak kell lennie!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbNettoEgysegar.Text = "";
                     lbAfatartalom.Text = "Áfa tartalom: ";
                     lbBruttoar.Text = "Bruttó ár: ";
@@ -166,13 +167,19 @@ namespace termekekGUI
                         Termek ujTermek = new Termek(termekNev, afaKulcs, nettoAr);
                         termekek.Add(ujTermek);
                         sw.Write($"\n{termekNev};{afaKulcs};{nettoAr}");
-                        sw.Close();
                     }
-                    fs.Close();
                 }
                 tbNettoEgysegar.Text = "";
                 tbTermekNeve.Text = "";
                 Betoltes();
+            }
+            else if(tbTermekNeve.Text == "")
+            {
+                MessageBox.Show("A termék neve nem lehet üres!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (tbNettoEgysegar.Text == "")
+            {
+                MessageBox.Show("A nettó ár nem lehet üres!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

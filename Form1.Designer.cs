@@ -258,7 +258,7 @@
             Controls.Add(panel1);
             Controls.Add(dgAdatok);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Termékek";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgAdatok).EndInit();
             panel1.ResumeLayout(false);
